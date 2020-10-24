@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import EstablishmentsService from '../../services/establishments_service'
-import Ratings from './Ratings/index'
+import Ratings from './Ratings'
 import styled from 'styled-components'
 
 const LeftBar = styled.div `
@@ -16,7 +16,6 @@ const LeftBar = styled.div `
 const Title = styled.h1 `
     font-size: 20px;
     color: rgba(220,110, 50, .7);
-
 `
 
 const Paragraph = styled.p `
@@ -70,6 +69,7 @@ const Establishment = (props) => {
             }
             <hr />
             <Paragraph>{establishment.formatted_address}</Paragraph>
+            <Ratings place={props.place} />
         </LeftBar>
     )
 }
