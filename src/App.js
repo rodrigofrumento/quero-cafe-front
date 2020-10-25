@@ -40,7 +40,7 @@ function App() {
           {
             locations.map((item, index) => {
               return(
-                <Marker key={index} icon="/images/coffee-pin.png" title={item.name} animation="4" 
+                <Marker key={index} icon="/images/vegan.png" title={item.name} animation="4" 
                         position={{lat: item.geometry.location.lat, lng: item.geometry.location.lng}}
                         onClick={() => setSelected(item)}
                 />
